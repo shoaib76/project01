@@ -1,13 +1,16 @@
 
 
-import React from 'react';
+import React, { useContext } from 'react';
+import {valuecontext1,valuecontext} from './valuecontext';
+//import  from './valuecontext';
 
-function child(props) {
+function Child(props) {
+  let num1 = useContext(valuecontext);
   return (
     <div >
-      Child number {props.num}
+      Child number {num1}
     </div>
   );
 }
 
-export default child;
+export default Child;

@@ -1,14 +1,17 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import Child from './child'
+import { valuecontext1,valuecontext } from './valuecontext';
 
-function parint(props) {
+function Parint(props) {
+  let val = useContext(valuecontext1);
   return (
     <div >
-      Parent
-      <Child num={props.num}></Child>
+      Parent {val}
+      
+      
     </div>
   );
 }
 
-export default parint;
+export default Parint;

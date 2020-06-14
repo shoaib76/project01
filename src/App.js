@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Parint from './parint';
+import Child from './child';
+import Valuecontext from './valuecontext';
+import Parent from './parint';
 
 function App() {
   let [number, setNumber] = useState(45);
   return (
-    <div >
+   
+      <div >
       Hello World
-      <Parint num={number}></Parint>
-      <button onClick={()=>{ setNumber(++number) }} >Update Number</button>
-    </div>
+      <Child></Child>
+      <Parent></Parent>
+
+        <button onClick={()=>{ setNumber(++number) }} >Update Number</button>
+      </div>
+    
+   
   );
 }
 
